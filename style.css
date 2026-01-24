@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'noto sans';
+}
+
+    /* Styling .grid & .stickyNote as well as their children */
+
+.grid {
+    display: grid;
+    grid-template: repeat(5, 1fr) / repeat(10, 1fr);
+    gap: 10px;
+    margin: 100px auto 50px;
+    max-width: 1700px;
+    height: 800px;
+    border: 3px solid black;
+}
+
+.stickyNote {
+    border: 2px solid hsl(36 100% 47.8%);
+    background-color: hsla(36 100% 47.8% / 10%);
+}
+
+.stickyNote h2 {
+    font-size: 18px;
+    border-bottom: 2px solid hsl(36 100% 47.8%);
+    background-color: hsla(36 100% 47.8% / 20%);
+}
+.stickyNote h3 {
+    font-size: 16px;
+}
+
+.stickyNote a+a:before {
+    content: "/ ";
+    color: black;
+}
+.stickyNote a {
+    font-style: italic;
+    color: hsl(215 100% 46.5%);
+    text-decoration: none;
+    transition: color 0.30s;
+}
+.stickyNote a:hover {
+    text-decoration: underline;
+    color: red;
+    transition: color 0.30s;
+}
